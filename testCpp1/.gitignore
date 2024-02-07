@@ -1,0 +1,10 @@
+build/
+.idea/
+.gradule/
+.cxx/
+jni/
+release/
+cocos2d/
+proj.ios_mac/
+proj.win32/
+proj.linux/
