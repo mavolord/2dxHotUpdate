@@ -50,6 +50,7 @@ public class UpdateActivity extends Activity {
                 @Override
                 public void onFailure(@NotNull Call call, @NotNull IOException e) {
                     System.out.println("请求发送失败");
+                    startGame();
                 }
 
                 @Override

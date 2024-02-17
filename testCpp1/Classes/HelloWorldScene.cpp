@@ -116,6 +116,13 @@ bool HelloWorld::init()
         this->addChild(sprite, 0);
     }
     log("cocos2dx项目启动成功");
+
+    auto title = Label::createWithTTF("大家好,我是zzy!, 这是热更之后的界面", "fonts/kingnanmaiyuan.ttf", 64);
+    title->setTextColor(Color4B(12, 34, 123, 255));
+    title->setPosition(this->getContentSize() / 2);
+    title->enableOutline(Color4B(134,212,98, 255), 5);
+    this->addChild(title, 9999, "title");
+
     return true;
 }
 
