@@ -15,7 +15,7 @@ app.listen(port, ()=>{
 app.use(express.static("so"));
 
 //监听文件变化
-var filePath = "./so/libTest.so";
+const filePath = "./so/libTest.so";
 var soMd5 = "";
 
 function calcSoMd5(){
@@ -27,10 +27,9 @@ function calcSoMd5(){
 
 calcSoMd5();
 
-fs.watch("./so/", (e, file)=>{
-	if(file && eventType === "change"){
-		consolg.log("so file has changeed!");
-		console.log(file);
+fs.watch(filePath, (e, file)=>{
+	if(file && e == "change"){
+		console.log("so file has changeed!");
 		calcSoMd5();
 	}
 });
